@@ -9,4 +9,8 @@ router.get("/input", (req, res) => {
     res.render("pages/supplier_input");
 });
 
+router.get("/list", (req, res) => {
+    res.render("pages/supplier_list");
+});
+
 module.exports = router;
