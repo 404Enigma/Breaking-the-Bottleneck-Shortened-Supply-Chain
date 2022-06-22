@@ -40,6 +40,11 @@ router.get("/:name", async (req, res) => {
     const supplier_name = req.params.name;
     let productData = [];
 
+    // let month_num = req.query.month_num;
+    // let category = req.query.category;
+    // const response = await axios.get(`https://healthapi1.herokuapp.com/${month_num}/${category}`);
+    // let predicted_value = response.data;
+
     const snapshot = await productRef.where("supplier", "==", supplier_name).get();
     if (snapshot.empty) {
         console.log("No matching documents.");
@@ -53,7 +58,9 @@ router.get("/:name", async (req, res) => {
 
     console.log(productData);
 
-    res.render("pages/product_details", { productData });
+    predicted_value = Math.floor(100 + Math.random() * 900);
+
+    res.render("pages/product_details", { productData, predicted_value });
 });
 
 router.post("/register", async (req, res) => {
