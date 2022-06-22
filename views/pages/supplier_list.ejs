@@ -40,12 +40,7 @@
                 <!-- <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a> -->
 
                 <a class="navbar-brand logo-text" href="/">SupplyByte</a>
-                <button
-                    class="navbar-toggler p-0 border-0"
-                    type="button"
-                    id="navbarSideCollapse"
-                    aria-label="Toggle navigation"
-                >
+                <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -83,66 +78,22 @@
                     <p>Lists</p>
                     <h2 class="py-2">Curated List of Suppliers</h2>
                     <p class="para-light">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae asperiores, quia accusantium sunt
-                        corporis optio recusandae? Nostrum libero pariatur cumque, ipsa dolores voluptatibus voluptate
-                        alias sit fuga. Itaque, ea quo.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae asperiores, quia accusantium sunt corporis optio recusandae? Nostrum libero pariatur cumque, ipsa dolores
+                        voluptatibus voluptate alias sit fuga. Itaque, ea quo.
                     </p>
                 </div>
                 <div class="row gy-4 py-2" data-aos="zoom-in">
+                    <% supplierData.map(data => { %>
                     <div class="col-lg-4">
                         <div class="card h-100 bg-transparent">
                             <i class="fas fa-boxes-packing fa-2x"></i>
-                            <h4 class="py-2">Rahul Pharmacy</h4>
+                            <h4 class="py-2"><%= data.name %> </h4>
                             <p class="para-light">Rating: 3/5</p>
-                            <p class="para-light">Phone: +91-123456789</p>
-                            <p class="para-light">Add: 221B, Baker St., London</p>
+                            <p class="para-light">Phone: +91-<%= data.phone %> </p>
+                            <p class="para-light">Add: <%= data.address %> </p>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="card h-100 bg-transparent">
-                            <i class="fas fa-boxes-packing fa-2x"></i>
-                            <h4 class="py-2">Rahul Pharmacy</h4>
-                            <p class="para-light">Rating: 3/5</p>
-                            <p class="para-light">Phone: +91-123456789</p>
-                            <p class="para-light">Add: 221B, Baker St., London</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card h-100 bg-transparent">
-                            <i class="fas fa-boxes-packing fa-2x"></i>
-                            <h4 class="py-2">Rahul Pharmacy</h4>
-                            <p class="para-light">Rating: 3/5</p>
-                            <p class="para-light">Phone: +91-123456789</p>
-                            <p class="para-light">Add: 221B, Baker St., London</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card h-100 bg-transparent">
-                            <i class="fas fa-boxes-packing fa-2x"></i>
-                            <h4 class="py-2">Rahul Pharmacy</h4>
-                            <p class="para-light">Rating: 3/5</p>
-                            <p class="para-light">Phone: +91-123456789</p>
-                            <p class="para-light">Add: 221B, Baker St., London</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card h-100 bg-transparent">
-                            <i class="fas fa-boxes-packing fa-2x"></i>
-                            <h4 class="py-2">Rahul Pharmacy</h4>
-                            <p class="para-light">Rating: 3/5</p>
-                            <p class="para-light">Phone: +91-123456789</p>
-                            <p class="para-light">Add: 221B, Baker St., London</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card h-100 bg-transparent">
-                            <i class="fas fa-boxes-packing fa-2x"></i>
-                            <h4 class="py-2">Rahul Pharmacy</h4>
-                            <p class="para-light">Rating: 3/5</p>
-                            <p class="para-light">Phone: +91-123456789</p>
-                            <p class="para-light">Add: 221B, Baker St., London</p>
-                        </div>
-                    </div>
+                    <% }) %>
                 </div>
                 <!-- end of row -->
             </div>
@@ -158,10 +109,7 @@
                         <div class="d-flex align-items-center">
                             <h4 class="">SupplyByte</h4>
                         </div>
-                        <p class="py-3 para-light"
-                            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus animi repudiandae explicabo
-                            esse maxime, impedit rem voluptatibus amet error quas.</p
-                        >
+                        <p class="py-3 para-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus animi repudiandae explicabo esse maxime, impedit rem voluptatibus amet error quas.</p>
                         <div class="d-flex">
                             <div class="me-3">
                                 <a href="#your-link">
@@ -229,9 +177,7 @@
                         <div class="d-flex align-items-center">
                             <h4>Made by</h4>
                         </div>
-                        <p class="py-3 para-light text-decoration-underline"
-                            ><a href="https://404enigma.tech/" target="_blank">404Enigma</a></p
-                        >
+                        <p class="py-3 para-light text-decoration-underline"><a href="https://404enigma.tech/" target="_blank">404Enigma</a></p>
                     </div>
                 </div>
             </div>

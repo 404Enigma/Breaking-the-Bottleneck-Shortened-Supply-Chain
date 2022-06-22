@@ -4,13 +4,36 @@ const admin = require("../config/db");
 
 const db = admin.firestore();
 const supplierRef = db.collection("Suppliers");
+const productRef = db.collection("Products");
 
 router.get("/register", (req, res) => {
     res.render("pages/supplier_input");
 });
 
-router.get("/list", (req, res) => {
-    res.render("pages/supplier_list");
+router.get("/list", async (req, res) => {
+    let supplierData = [];
+    const snapshot = await supplierRef.get();
+    snapshot.forEach((doc) => {
+        // console.log(doc.id, "=>", doc.data());
+        supplierData.push(doc.data());
+    });
+
+    console.log(supplierData);
+
+    res.render("pages/supplier_list", { supplierData });
+});
+
+router.get("/:name/product/list", async (req, res) => {
+    let productData = [];
+    const snapshot = await productRef.get();
+    snapshot.forEach((doc) => {
+        // console.log(doc.id, "=>", doc.data());
+        productData.push(doc.data());
+    });
+
+    console.log(productData);
+
+    res.render("pages/supplier_list", { productData });
 });
 
 router.post("/register", async (req, res) => {
