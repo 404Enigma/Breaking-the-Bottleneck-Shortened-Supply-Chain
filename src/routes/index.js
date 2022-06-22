@@ -5,9 +5,9 @@ router.get("/", (req, res) => {
     res.render("pages/index");
 });
 
-router.get("/product/details", (req, res) => {
-    res.render("pages/product_details");
-});
+// router.get("/product/details", (req, res) => {
+//     res.render("pages/product_details");
+// });
 router.get("/product/register", (req, res) => {
     res.render("pages/product_input");
 });

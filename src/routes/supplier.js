@@ -23,17 +23,24 @@ router.get("/list", async (req, res) => {
     res.render("pages/supplier_list", { supplierData });
 });
 
-router.get("/:name/product/list", async (req, res) => {
+router.get("/:name", async (req, res) => {
+    const supplier_name = req.params.name;
     let productData = [];
-    const snapshot = await productRef.get();
+
+    const snapshot = await productRef.where("supplier", "==", supplier_name).get();
+    if (snapshot.empty) {
+        console.log("No matching documents.");
+        return;
+    }
+
     snapshot.forEach((doc) => {
-        // console.log(doc.id, "=>", doc.data());
+        // console.log(doc.id, '=>', doc.data());
         productData.push(doc.data());
     });
 
     console.log(productData);
 
-    res.render("pages/supplier_list", { productData });
+    res.render("pages/product_details", { productData });
 });
 
 router.post("/register", async (req, res) => {
