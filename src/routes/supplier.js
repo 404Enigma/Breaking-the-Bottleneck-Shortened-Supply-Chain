@@ -23,6 +23,19 @@ router.get("/list", async (req, res) => {
     res.render("pages/supplier_list", { supplierData });
 });
 
+router.get("/list/emergency", async (req, res) => {
+    let supplierData = [];
+    const snapshot = await supplierRef.get();
+    snapshot.forEach((doc) => {
+        // console.log(doc.id, "=>", doc.data());
+        supplierData.push(doc.data());
+    });
+
+    console.log(supplierData);
+
+    res.render("pages/supplier_list", { supplierData });
+});
+
 router.get("/:name", async (req, res) => {
     const supplier_name = req.params.name;
     let productData = [];
