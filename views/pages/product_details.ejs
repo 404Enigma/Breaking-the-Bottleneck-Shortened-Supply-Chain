@@ -96,16 +96,9 @@
                                     <h5 class="text-success">In Stock: <%= data.stock %> </h5>
 
                                     <div class="row justify-content-center ms-1 mt-5">
-                                        <div
-                                            class="col-sm-12 col-lg-12 row border border-3 border-warning rounded-3"
-                                            id="current"
-                                        >
-                                            <span class="col-6 my-auto py-3"
-                                                ><h4> Predicted Sales of Current Month</h4></span
-                                            >
-                                            <span class="col-6 my-auto d-flex justify-content-center" id="drugs"
-                                                ><h4> 103 </h4></span
-                                            >
+                                        <div class="col-sm-12 col-lg-12 row border border-3 border-warning rounded-3" id="current">
+                                            <span class="col-6 my-auto py-3"><h4> Predicted Sales of Current Month</h4></span>
+                                            <span class="col-6 my-auto d-flex justify-content-center" id="drugs"><h4> <%= predicted_value %> </h4></span>
                                         </div>
                                     </div>
                                     <div class="mt-3 ms-1 col-12" id="prediction">
