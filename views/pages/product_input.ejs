@@ -38,12 +38,7 @@
                 <!-- <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a> -->
 
                 <a class="navbar-brand logo-text" href="/">SupplyByte</a>
-                <button
-                    class="navbar-toggler p-0 border-0"
-                    type="button"
-                    id="navbarSideCollapse"
-                    aria-label="Toggle navigation"
-                >
+                <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -77,12 +72,9 @@
         <!-- Contact -->
         <section class="contact d-flex align-items-center mt-0 pt-0 pb-5" id="contact">
             <div class="container text-light">
-                <form id="register_supplier">
+                <form id="register_product">
                     <div class="row">
-                        <div
-                            class="col-lg-12 d-flex justify-content-center justify-content-lg-end align-items-center px-lg-5"
-                            data-aos="fade-right"
-                        >
+                        <div class="col-lg-12 d-flex justify-content-center justify-content-lg-end align-items-center px-lg-5" data-aos="fade-right">
                             <div style="width: 90%">
                                 <div class="text-center text-lg-start py-4 pt-lg-0">
                                     <p>SUPPLIER</p>
@@ -93,42 +85,23 @@
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="form-group py-2">
-                                                <input
-                                                    type="text"
-                                                    required
-                                                    name="name"
-                                                    class="form-control form-control-input"
-                                                    id="exampleFormControlInput1"
-                                                    placeholder="Name of product"
-                                                />
+                                                <input type="text" required name="name" class="form-control form-control-input" id="exampleFormControlInput1" placeholder="Name of product" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="form-group py-2">
-                                                <input
-                                                    type="text"
-                                                    required
-                                                    name="name"
-                                                    class="form-control form-control-input"
-                                                    id="exampleFormControlInput1"
-                                                    placeholder="Name of supplier"
-                                                />
+                                                <input type="text" required name="supplier" class="form-control form-control-input" id="exampleFormControlInput1" placeholder="Name of supplier" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group py-1">
-                                        <select
-                                            class="form-select form-control form-control-input"
-                                            required
-                                            name="category"
-                                            aria-label="Default select example"
-                                        >
+                                        <select class="form-select form-control form-control-input" required name="type" aria-label="Default select example">
                                             <option selected>General Sales List</option>
-                                            <option value="1">Pharmacy Medicines</option>
-                                            <option value="2">Prescription Only Medicines</option>
-                                            <option value="3">Controlled Drugs</option>
+                                            <option value="Pharmacy Medicines">Pharmacy Medicines</option>
+                                            <option value="Prescription Only Medicines">Prescription Only Medicines</option>
+                                            <option value="Controlled Drugs">Controlled Drugs</option>
                                         </select>
                                     </div>
                                     <div class="form-group py-2">
@@ -143,27 +116,15 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-group py-2">
-                                            <input
-                                                type="text"
-                                                required
-                                                name="name"
-                                                class="form-control form-control-input"
-                                                id="exampleFormControlInput1"
-                                                placeholder="Price"
-                                            />
+                                            <input type="text" required name="price" class="form-control form-control-input" id="exampleFormControlInput1" placeholder="Price" />
                                         </div>
                                     </div>
                                     <div class="form-group py-1">
-                                        <select
-                                            class="form-select form-control form-control-input"
-                                            required
-                                            name="range"
-                                            aria-label="Default select example"
-                                        >
+                                        <select class="form-select form-control form-control-input" required name="stock" aria-label="Default select example">
                                             <option selected>1-20</option>
-                                            <option value="1">20-50</option>
-                                            <option value="2">50-100</option>
-                                            <option value="3">100+</option>
+                                            <option value="20-50">20-50</option>
+                                            <option value="50-100">50-100</option>
+                                            <option value="100+">100+</option>
                                         </select>
                                     </div>
                                 </div>
@@ -258,9 +219,7 @@
                         <div class="d-flex align-items-center">
                             <h4>Made by</h4>
                         </div>
-                        <p class="py-3 para-light text-decoration-underline"
-                            ><a href="https://404enigma.tech/" target="_blank">404Enigma</a></p
-                        >
+                        <p class="py-3 para-light text-decoration-underline"><a href="https://404enigma.tech/" target="_blank">404Enigma</a></p>
                     </div>
                 </div>
             </div>
@@ -275,15 +234,12 @@
 
         <script src="/js/main.js"></script>
         <script>
-            console.log("dscsc");
             // API calls
-            const register_supplier = document.getElementById("register_supplier");
+            const register_product = document.getElementById("register_product");
 
-            console.log(register_supplier);
-
-            if (typeof register_supplier != "undefined" && register_supplier != null) {
+            if (typeof register_product != "undefined" && register_product != null) {
                 // Exists.
-                register_supplier.addEventListener("submit", async (e) => {
+                register_product.addEventListener("submit", async (e) => {
                     e.preventDefault();
 
                     const formData = new FormData(e.target);
@@ -292,7 +248,7 @@
 
                     axios({
                         method: "post",
-                        url: "/supplier/register",
+                        url: "/product/register",
                         data,
                     })
                         .then(function (response) {
