@@ -28,6 +28,7 @@
             referrerpolicy="no-referrer"
         />
         <link href="/css/styles.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     </head>
     <body>
         <!-- Navigation -->
@@ -37,12 +38,7 @@
                 <!-- <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a> -->
 
                 <a class="navbar-brand logo-text" href="/">SupplyByte</a>
-                <button
-                    class="navbar-toggler p-0 border-0"
-                    type="button"
-                    id="navbarSideCollapse"
-                    aria-label="Toggle navigation"
-                >
+                <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -78,10 +74,7 @@
             <div class="container text-light">
                 <form id="register_supplier">
                     <div class="row">
-                        <div
-                            class="col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-center px-lg-5"
-                            data-aos="fade-right"
-                        >
+                        <div class="col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-center px-lg-5" data-aos="fade-right">
                             <div style="width: 90%">
                                 <div class="text-center text-lg-start py-4 pt-lg-0">
                                     <p>SUPPLIER</p>
@@ -94,6 +87,7 @@
                                             <div class="form-group py-2">
                                                 <input
                                                     type="text"
+                                                    required
                                                     name="name"
                                                     class="form-control form-control-input"
                                                     id="exampleFormControlInput1"
@@ -103,25 +97,15 @@
                                         </div>
                                     </div>
                                     <div class="form-group py-1">
-                                        <select
-                                            class="form-select form-control form-control-input"
-                                            name="category"
-                                            aria-label="Default select example"
-                                        >
-                                            <option selected>Category</option>
-                                            <option value="1">Pharmacy</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
+                                        <select class="form-select form-control form-control-input" required name="category" aria-label="Default select example">
+                                            <option selected>General Sales List</option>
+                                            <option value="1">Pharmacy Medicines</option>
+                                            <option value="2">Prescription Only Medicines</option>
+                                            <option value="3">Controlled Drugs</option>
                                         </select>
                                     </div>
                                     <div class="form-group py-2">
-                                        <textarea
-                                            name="description"
-                                            class="form-control form-control-input"
-                                            id="exampleFormControlTextarea1"
-                                            rows="6"
-                                            placeholder="Description"
-                                        ></textarea>
+                                        <textarea name="description" required class="form-control form-control-input" id="exampleFormControlTextarea1" rows="6" placeholder="Description"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -134,44 +118,20 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group py-2">
-                                            <input
-                                                type="url"
-                                                name="website"
-                                                class="form-control form-control-input"
-                                                id="exampleFormControlInput1"
-                                                placeholder="Enter website"
-                                            />
+                                            <input type="url" name="website" required class="form-control form-control-input" id="exampleFormControlInput1" placeholder="Enter website" />
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group py-2">
-                                            <input
-                                                type="phone"
-                                                name="phone"
-                                                class="form-control form-control-input"
-                                                id="exampleFormControlInput2"
-                                                placeholder="Enter phone number"
-                                            />
+                                            <input type="phone" name="phone" required class="form-control form-control-input" id="exampleFormControlInput2" placeholder="Enter phone number" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group py-1">
-                                    <input
-                                        type="email"
-                                        name="email"
-                                        class="form-control form-control-input"
-                                        id="exampleFormControlInput3"
-                                        placeholder="Enter email"
-                                    />
+                                    <input type="email" name="email" required class="form-control form-control-input" id="exampleFormControlInput3" placeholder="Enter email" />
                                 </div>
                                 <div class="form-group py-2">
-                                    <textarea
-                                        class="form-control form-control-input"
-                                        name="address"
-                                        id="exampleFormControlTextarea1"
-                                        rows="6"
-                                        placeholder="Address"
-                                    ></textarea>
+                                    <textarea class="form-control form-control-input" name="address" required id="exampleFormControlTextarea1" rows="6" placeholder="Address"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -195,10 +155,7 @@
                         <div class="d-flex align-items-center">
                             <h4 class="">SupplyByte</h4>
                         </div>
-                        <p class="py-3 para-light"
-                            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus animi repudiandae explicabo
-                            esse maxime, impedit rem voluptatibus amet error quas.</p
-                        >
+                        <p class="py-3 para-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus animi repudiandae explicabo esse maxime, impedit rem voluptatibus amet error quas.</p>
                         <div class="d-flex">
                             <div class="me-3">
                                 <a href="#your-link">
@@ -266,9 +223,7 @@
                         <div class="d-flex align-items-center">
                             <h4>Made by</h4>
                         </div>
-                        <p class="py-3 para-light text-decoration-underline"
-                            ><a href="https://404enigma.tech/" target="_blank">404Enigma</a></p
-                        >
+                        <p class="py-3 para-light text-decoration-underline"><a href="https://404enigma.tech/" target="_blank">404Enigma</a></p>
                     </div>
                 </div>
             </div>

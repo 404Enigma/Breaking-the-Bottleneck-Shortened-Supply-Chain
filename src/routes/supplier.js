@@ -14,7 +14,9 @@ router.get("/list", (req, res) => {
 });
 
 router.post("/register", async (req, res) => {
-    const data = req.body.data;
+    const data = req.body;
+
+    console.log(data);
 
     await supplierRef
         .doc(data.name)
