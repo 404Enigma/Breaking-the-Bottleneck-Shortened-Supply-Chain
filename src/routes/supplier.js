@@ -12,7 +12,7 @@ router.get("/register", (req, res) => {
 
 router.get("/list", async (req, res) => {
     let supplierData = [];
-    const snapshot = await supplierRef.get();
+    const snapshot = await supplierRef.orderBy("name", "desc").limit(3).get();
     snapshot.forEach((doc) => {
         // console.log(doc.id, "=>", doc.data());
         supplierData.push(doc.data());
@@ -33,7 +33,7 @@ router.get("/list/emergency", async (req, res) => {
 
     console.log(supplierData);
 
-    res.render("pages/supplier_list", { supplierData });
+    res.render("pages/supplier_emergency_list", { supplierData });
 });
 
 router.get("/:name", async (req, res) => {

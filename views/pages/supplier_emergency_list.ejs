@@ -82,6 +82,9 @@
                     <% supplierData.map(data => { %>
                     <div class="col-lg-4">
                         <div class="card h-100 bg-transparent">
+                            <% if("emergency" in data){ %>
+                            <span class="badge text-bg-danger py-2 mb-2">Recommended</span>
+                            <% } %>
                             <i class="fas fa-boxes-packing fa-2x"></i>
                             <h4 class="py-2"><%= data.name %> </h4>
                             <p class="para-light">Rating: 3/5</p>
