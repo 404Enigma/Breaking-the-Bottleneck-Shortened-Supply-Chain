@@ -40,12 +40,7 @@
                 <!-- <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a> -->
 
                 <a class="navbar-brand logo-text" href="/">SupplyByte</a>
-                <button
-                    class="navbar-toggler p-0 border-0"
-                    type="button"
-                    id="navbarSideCollapse"
-                    aria-label="Toggle navigation"
-                >
+                <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -72,7 +67,7 @@
                     <div class="col-xl-10 offset-xl-1">
                         <h1>Product Details</h1>
                         <h3 class="btn btn-emergency bg-danger float-end mb-5">
-                            <a href=""><i class="fas fa-exclamation-triangle"></i> &nbsp; Emergency Stock </a></h3
+                            <a href="/supplier/list/emergency"><i class="fas fa-exclamation-triangle"></i> &nbsp; Emergency Stock </a></h3
                         >
                     </div>
                 </div>
@@ -85,23 +80,11 @@
                 <% productData.map(data => { %>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
-                        <button
-                            class="accordion-button"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne"
-                            aria-expanded="true"
-                            aria-controls="collapseOne"
-                        >
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             <%= data.name %>
                         </button>
                     </h2>
-                    <div
-                        id="collapseOne"
-                        class="accordion-collapse collapse show"
-                        aria-labelledby="headingOne"
-                        data-bs-parent="#accordionExample"
-                    >
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             <div class="row">
                                 <div class="col">
@@ -112,9 +95,7 @@
                                     <h5 class="text-danger">Price: $<%= data.price %> </h5>
                                     <h5 class="text-success">In Stock: <%= data.stock %> </h5>
                                 </div>
-                                <div class="col d-flex justify-content-center align-items-center"
-                                    ><img class="rounded-2" src="/assets/medicines.jpg" width="200" alt="" srcset=""
-                                /></div>
+                                <div class="col d-flex justify-content-center align-items-center"><img class="rounded-2" src="/assets/medicines.jpg" width="200" alt="" srcset="" /></div>
                             </div>
                         </div>
                     </div>
@@ -199,9 +180,7 @@
                         <div class="d-flex align-items-center">
                             <h4>Made by</h4>
                         </div>
-                        <p class="py-3 para-light text-decoration-underline"
-                            ><a href="https://404enigma.tech/" target="_blank">404Enigma</a></p
-                        >
+                        <p class="py-3 para-light text-decoration-underline"><a href="https://404enigma.tech/" target="_blank">404Enigma</a></p>
                     </div>
                 </div>
             </div>
