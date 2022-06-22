@@ -13,5 +13,6 @@ router.get("/product/register", (req, res) => {
 });
 
 router.use("/supplier", require("./supplier"));
+router.use("/product", require("./product"));
 
 module.exports = router;
